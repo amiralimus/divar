@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:untitled3/firstpag.dart';
 import 'package:untitled3/post.dart';
 import 'package:untitled3/postd.dart';
 
@@ -23,9 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const MyHomePage(
-        title: 'جست جو[..........................]',
-      ),
+      home: const  Cuaaad()
     );
   }
 }
