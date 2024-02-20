@@ -16,13 +16,13 @@ class Poi extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           new BoxShadow(
-            color: Colors.green,
+            color: Colors.greenAccent,
             offset: new Offset(6.0, 6.0),
           ),
         ],
       ),
       child: Center(
-        child: Text('لمس کنیدبرای شروع', style: TextStyle(fontSize: 30)),
+        child: Text('لمس کنیدبرای شروع', style: TextStyle(fontSize: 25)),
       ),
     );
   }
@@ -33,13 +33,9 @@ class Cuaaad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'amir',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white10),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
+    return
+       Scaffold(
+         backgroundColor: Colors.white,
         body: Column(children: [
           Spacer(),
           Text('پروژه ازمایشی {امیر علی موسوی}',
@@ -51,7 +47,7 @@ class Cuaaad extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MyApp(),
+                    builder: (context) => const MyHomePage(title: 'amir'),
                   ),
                 );
               },
@@ -59,7 +55,8 @@ class Cuaaad extends StatelessWidget {
           ),
           Spacer()
         ]),
-      ),
+
+
     );
   }
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class Mypost extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -11,7 +9,6 @@ class Mypost extends StatefulWidget {
 
 class _Mypoststate extends State<Mypost> {
   bool _issaved = false;
-
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +25,8 @@ class _Mypoststate extends State<Mypost> {
               setState(() {
                 _issaved = !_issaved;
                 if (_issaved == true) {
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(SnackBar(content: Text("save")));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("save")) as SnackBar);
                 } else {
                   ScaffoldMessenger.of(context)
                       .showSnackBar(SnackBar(content: Text("unsave")));
@@ -40,7 +37,7 @@ class _Mypoststate extends State<Mypost> {
           ),
           const Expanded(
             child:
-            Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
               Text('عنوان اگهی',
                   style: TextStyle(
                     color: Colors.black87,
@@ -49,17 +46,17 @@ class _Mypoststate extends State<Mypost> {
               Spacer(),
               Text('تومان',
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black,
                     fontSize: (16),
                   )),
               Text('تومان',
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black,
                     fontSize: (16),
                   )),
               Text('لحظاتی پیش در {محله}',
                   style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.black,
                     fontSize: (17),
                   )),
             ]),
@@ -74,4 +71,5 @@ class _Mypoststate extends State<Mypost> {
     return _Mypoststate();
   }
 }
+
 ///'s'

@@ -7,7 +7,10 @@ void setState(Null Function() param0) {}
 var img = Center(
     child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: Image.network('https://picsum.photos/250?image=11')));
+        child: Image.network('https://picsum.photos/250?image=11',
+          width:200,
+          height:200,
+        )));
 
 class Postd extends StatelessWidget {
   const Postd({super.key});
@@ -21,33 +24,33 @@ class Postd extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
-        backgroundColor: Colors.white38,
-        appBar: AppBar(backgroundColor: Colors.white, title: Iconst()),
+        backgroundColor: Colors.grey,
+        appBar: AppBar(backgroundColor: Colors.grey, title: Iconst()),
         body: SingleChildScrollView(
           child: Column(children: [
             img,
             const Divider(color: Colors.black),
             const Row(
               children: [
-                Icon(Icons.star),
+
                 Text('عنوان', style: TextStyle(fontSize: (15))),
-                Icon(Icons.star),
+
                 Spacer(),
-                Icon(Icons.star),
+
                 Text('مقدار', style: TextStyle(fontSize: (15))),
-                Icon(Icons.star)
+
               ],
             ),
             const Divider(color: Colors.black),
             const Row(
               children: [
-                Icon(Icons.star),
+
                 Text('عنوان', style: TextStyle(fontSize: (15))),
-                Icon(Icons.star),
+
                 Spacer(),
-                Icon(Icons.star),
+
                 Text('مقدار', style: TextStyle(fontSize: (15))),
-                Icon(Icons.star)
+
               ],
             ),
             const Divider(
@@ -55,13 +58,13 @@ class Postd extends StatelessWidget {
             ),
             const Row(
               children: [
-                Icon(Icons.star),
+
                 Text('عنوان', style: TextStyle(fontSize: (15))),
-                Icon(Icons.star),
+
                 Spacer(),
-                Icon(Icons.star),
+
                 Text('مقدار', style: TextStyle(fontSize: (15))),
-                Icon(Icons.star)
+
               ],
             ),
             const Divider(
@@ -69,7 +72,7 @@ class Postd extends StatelessWidget {
             ),
             const Text(
                 'امیروار در زمینه فروش و خرید محولات و خدمات مختلف فعالیت میکند و به کاربرانش این اجازه را میدهد تا به راحتی و با قیمت مناسب کالا های مورد نیازشان را پیدا کنند از جمله محصولاتی که....'),
-            Divider(color: Colors.deepOrange),
+            Divider(color: Colors.black),
             const Row(
               children: [
                 Icon(Icons.question_mark_rounded),
@@ -78,7 +81,7 @@ class Postd extends StatelessWidget {
                 Icon(Icons.chevron_right_sharp),
               ],
             ),
-            const Divider(color: Colors.deepOrange),
+            const Divider(color: Colors.black),
             const Row(children: [
               Icon(Icons.question_mark),
               Text('راهنمای خرید امن'),
@@ -87,22 +90,30 @@ class Postd extends StatelessWidget {
             ]),
           ]),
         ),
-        bottomNavigationBar: BottomAppBar(
-
+        bottomNavigationBar:
+    ClipRRect(borderRadius: BorderRadius.circular(20),
+    child:
+        BottomAppBar(
+          color: Colors.black,
           child: Row(
             children: <Widget>[
-              Text('شماره مخفی شده است پیام دهید'),
+              Text('شماره مخفی شده است پیام دهید',
+              style: TextStyle(color:Colors.white),
+              ),
               Spacer(),
+          ClipRRect(borderRadius: BorderRadius.circular(20),
+            child:
               Container(
                 width: 100,
                 height: 200,
-                decoration: BoxDecoration(
+                decoration:
+                BoxDecoration(
                   shape: BoxShape.rectangle,
-                  color: Colors.redAccent,
+                  color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.red,
-                      blurRadius: 11,
+                      color: Colors.black,
+                      blurRadius: 22,
                     ),
                   ],
                 ),
@@ -110,14 +121,16 @@ class Postd extends StatelessWidget {
                   child: Text(
                     'چت',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 16.0,
                     ),
                   ),
                 ),
-              )
+              ),
+          ),
             ],
           ),
+        ),
         ),
       ),
     );

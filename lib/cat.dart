@@ -33,7 +33,7 @@ class Category extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.all(14.0),
       child: Column(
-        children: [Icon(Icons.add), Text('amirvar+')],
+        children: [Icon(Icons.add_a_photo), Text('amirvar+')],
       ),
     );
   }
