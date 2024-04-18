@@ -7,7 +7,7 @@ import 'MAINE2.dart';
 import 'cat.dart';
 
 void main() {
-  runApp( MyApp2());
+  runApp(MyApp2());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,20 +17,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'amir',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-        useMaterial3: true,
-      ),
-      home: const   MyHomePage(title: '',)                     //MyHomePage(title: 'amir'),
-    );
+        title: 'amir',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+          useMaterial3: true,
+        ),
+        home: const MyHomePage(
+          title: '',
+        ) //MyHomePage(title: 'amir'),
+        );
   }
 }
-
-
-
-
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -41,16 +38,6 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-
-
-
-
-
-
-
-
-
-
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -58,22 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      MaterialApp(
+    return MaterialApp(
       title: 'AMIRVAR',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white10),
@@ -82,8 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
       home: Scaffold(
         backgroundColor: Colors.grey,
         appBar: AppBar(
-          title: Text('AMIRVAR',
-          style: TextStyle(color: Colors.white),
+          title: Text(
+            'AMIRVAR',
+            style: TextStyle(color: Colors.white),
           ),
           elevation: 7.5,
           backgroundColor: Colors.black,
@@ -97,11 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
             InkWell(
               child: Mypost(),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Postd(),
-                  ),
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context)  => Postd() )
                 );
               },
             ),
@@ -219,36 +189,40 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ]),
         ),
-
-        bottomNavigationBar:
-    ClipRRect(borderRadius: BorderRadius.circular(20),
-      child:
-        BottomAppBar(
-          color: Colors.black,
-
-
-          child: Row(
-            children: <Widget>[
-              Icon(Icons.account_circle,
-                color: Colors.white,
-              ),
-              Spacer(),
-              Icon(Icons.chat_bubble_sharp,
-                color: Colors.white,),
-              Spacer(),
-              Icon(Icons.add_circle_outlined,
-                color: Colors.white,),
-              Spacer(),
-              Icon(Icons.table_rows_rounded,
-                color: Colors.white,),
-              Spacer(),
-              Icon(Icons.devices,
-                color: Colors.white,),
-            ],
+        bottomNavigationBar: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: BottomAppBar(
+            color: Colors.black,
+            child: Row(
+              children: <Widget>[
+                Icon(
+                  Icons.account_circle,
+                  color: Colors.white,
+                ),
+                Spacer(),
+                Icon(
+                  Icons.chat_bubble_sharp,
+                  color: Colors.white,
+                ),
+                Spacer(),
+                Icon(
+                  Icons.add_circle_outlined,
+                  color: Colors.white,
+                ),
+                Spacer(),
+                Icon(
+                  Icons.table_rows_rounded,
+                  color: Colors.white,
+                ),
+                Spacer(),
+                Icon(
+                  Icons.devices,
+                  color: Colors.white,
+                ),
+              ],
+            ),
           ),
-
         ),
-    ),
       ),
     );
   }

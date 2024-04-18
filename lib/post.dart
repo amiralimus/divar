@@ -39,7 +39,7 @@ class _Mypoststate extends State<Mypost> {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
               Text('عنوان اگهی',
-                  style: TextStyle(
+                  style: TextStyle
                     color: Colors.black87,
                     fontSize: (20),
                   )),

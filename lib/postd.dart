@@ -5,8 +5,7 @@ import 'main.dart';
 
 void setState(Null Function() param0) {}
 var img = Center(
-    child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+    child: C
         child: Image.network('https://picsum.photos/250?image=11',
           width:200,
           height:200,
